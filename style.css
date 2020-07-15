@@ -1,0 +1,415 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.home {
+  height: 100vh;
+  background: #000;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f00, #f00, #0f0, #0ff, #ff0, #0ff);
+  mix-blend-mode: color;
+  pointer-events: none;
+}
+
+video {
+  object-fit: cover;
+}
+
+.line {
+  position: absolute;
+  top: 22%;
+  left: 7.5%;
+  width: 85%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(187, 106, 81);
+  opacity: 0;
+  -moz-animation: fadeIn 5s 5s;
+  -webkit-animation: fadeIn 5s 5s;
+  animation: fadeIn 5s 5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: "Bangers", cursive;
+  font-size: 130px;
+  color: rgb(187, 106, 81);
+}
+
+h1 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+}
+
+.btn-container {
+  position: absolute;
+  top: 70%;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  -moz-animation: fadeIn 5s 5s;
+  -webkit-animation: fadeIn 5s 5s;
+  animation: fadeIn 5s 5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+a {
+  position: relative;
+  display: inline-block;
+  padding: 20px 25px;
+  margin: 40px 10px;
+  width: 200px;
+  color: #03e9f4;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  -webkit-box-reflect: below 1px lineargradient(transparent, #0005);
+}
+
+a:nth-child(1) {
+  filter: hue-rotate(290deg);
+}
+a:nth-child(3) {
+  filter: hue-rotate(110deg);
+}
+a:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 30px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: bro 1s linear infinite;
+}
+
+@keyframes bro {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: bro2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes bro2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: bro3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes bro3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: bro4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes bro4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+@keyframes bro {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 .head span:nth-child(1) {
+  animation-delay: 0.6s;
+}
+h1 .head span:nth-child(2) {
+  animation-delay: 0.6s;
+}
+h1 .head span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+h1 .head span:nth-child(4) {
+  animation-delay: 1.2s;
+}
+h1 .head span:nth-child(5) {
+  animation-delay: 1.6s;
+}
+h1 .head span:nth-child(6) {
+  animation-delay: 2s;
+}
+h1 .head span:nth-child(7) {
+  animation-delay: 2.4s;
+}
+
+h1 .head span:nth-child(8) {
+  animation-delay: 2.8s;
+}
+
+h1 .hide {
+  animation-delay: 3s;
+}
+/* Partition */
+h1 .head2 span:nth-child(1) {
+  animation-delay: 3.2s;
+}
+h1 .head2 span:nth-child(2) {
+  animation-delay: 3.6s;
+}
+h1 .head2 span:nth-child(3) {
+  animation-delay: 3.8s;
+}
+h1 .head2 span:nth-child(4) {
+  animation-delay: 4s;
+}
+
+/* DONE WITH HOME !!!! */
+
+.about-container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 250px;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  display: flex;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 10rem;
+  line-height: 1.2em;
+  padding: 50px;
+  text-align: center;
+  background-color: hsl(0, 37%, 89%);
+  color: black;
+}
+
+p {
+  height: 100%;
+  background-color: rgb(32, 27, 27);
+  color: #fff;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -330%);
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: white;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+/* ABOUT DONE */
+
+.work-cont {
+  position: relative;
+  margin-top: 235px;
+  z-index: -10;
+  background-color: grey;
+}
+
+.work {
+  font-size: 150px;
+  color: yellow;
+}
+/* TABLET vIEW */
+
+@media screen and (max-width: 769px) {
+  .hide {
+    display: none;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  a {
+    width: 160px;
+    font-size: 16px;
+    padding: 15px 15px;
+  }
+  .video {
+    display: none;
+  }
+}
+
+/* MOBILE VIEW */
+
+@media screen and (max-width: 480px) {
+  .hide {
+    display: none;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  a {
+    width: 120px;
+    font-size: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  .video {
+    display: none;
+  }
+}
