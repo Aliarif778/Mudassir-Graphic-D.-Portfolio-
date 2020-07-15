@@ -431,4 +431,11 @@ p {
   .video {
     display: none;
   }
+
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 18px;
+  }
 }
