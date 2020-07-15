@@ -364,20 +364,53 @@ p {
   mix-blend-mode: difference;
 }
 
-/* ABOUT DONE */
+/* ABOUT DONE
+WORK START  */
 
 .work-cont {
-  position: relative;
-  margin-top: 235px;
-  z-index: -10;
-  background-color: grey;
+  margin-top: 350px;
+  margin-bottom: 200px;
+
+  background-color: rgb(61, 55, 55);
 }
 
-.work {
-  font-size: 150px;
-  color: yellow;
+.main {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  min-height: 100vh;
 }
-/* TABLET vIEW */
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  background-color: #000;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0006);
+}
+
+/* TABLET VIEW */
 
 @media screen and (max-width: 769px) {
   .hide {

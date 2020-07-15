@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -83,7 +84,22 @@
     
       </section>
     <section class="work-cont">
-      <h3 class="work">WHAT I DO</h3>
+      <div class="main">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/b.jpg" alt="abc"></div>
+            <div class="swiper-slide"><img src="images/b.jpg" alt="abc"></div>
+            <div class="swiper-slide"><img src="images/b.jpg" alt="abc"></div>
+            <div class="swiper-slide"><img src="images/b.jpg" alt="abc"></div>
+            <div class="swiper-slide"><img src="images/b.jpg" alt="abc"></div>
+            <div class="swiper-slide"><img src="images/b.jpg" alt="abc"></div>
+            
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
     </section>
 
     <script src="script.js"></script>
@@ -93,5 +109,26 @@
       $('.pointer').css({left:e.pageX, top:e.pageY})
     })
   </script>
-  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
 </html>
